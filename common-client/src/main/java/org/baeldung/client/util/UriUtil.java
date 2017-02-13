@@ -19,6 +19,7 @@ public final class UriUtil {
         URL url = null;
         try {
             url = new UriTemplate(uriBase).expand(paramToExpand).toURL();
+            System.out.println("Dummy checkin does nothing.");
         } catch (final MalformedURLException ex) {
             throw new IllegalArgumentException(ex);
         }
