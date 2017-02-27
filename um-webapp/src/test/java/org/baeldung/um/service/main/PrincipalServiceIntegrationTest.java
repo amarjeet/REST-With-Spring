@@ -1,5 +1,6 @@
 package org.baeldung.um.service.main;
 
+import static junit.framework.TestCase.assertNotNull;
 import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 
 import org.baeldung.common.persistence.service.IService;
@@ -30,6 +31,15 @@ public class PrincipalServiceIntegrationTest extends SecServiceIntegrationTest<P
 
         getApi().create(createNewEntity(name));
         getApi().create(createNewEntity(name));
+    }
+
+    @Test
+    public void whenNewPrincipalIsCreated_thenItCanBeFound() {
+        final String name = randomAlphabetic(8);
+
+        final Principal principal = getApi().create(createNewEntity(name));
+        final Principal byName = principalService.findByName(principal.getName());
+        assertNotNull(byName);
     }
 
     // template method
