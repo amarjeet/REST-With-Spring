@@ -2,6 +2,7 @@ package org.baeldung.bogosity;
 
 import static org.junit.Assert.*;
 
+import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -33,5 +34,11 @@ public class BogoServiceTest {
     public void testGetUUID() {
         final String uuid = bogoService.getUUID();
         assertNotNull(uuid);
+    }
+
+    @Test
+    public void dateFromString() throws ParseException {
+        final Date date = bogoService.dateFromString("03/01/2017", "MM/dd/yyyy");
+        assertNotNull(date);
     }
 }

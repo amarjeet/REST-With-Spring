@@ -12,5 +12,5 @@ public interface BogoService {
 
     String getUUID();
 
-    Date dateFromString(String dateString) throws ParseException;
+    Date dateFromString(String dateString, String format) throws ParseException;
 }

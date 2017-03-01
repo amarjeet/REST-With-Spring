@@ -22,8 +22,8 @@ public class BogoServiceImpl implements BogoService {
     }
 
     @Override
-    public Date dateFromString(String dateString) throws ParseException {
-        DateFormat format = new SimpleDateFormat();
-        return format.parse(dateString);
+    public Date dateFromString(String dateString, String format) throws ParseException {
+        final SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+        return simpleDateFormat.parse(dateString);
     }
 }
