@@ -36,7 +36,7 @@ public class BogoServiceTest {
         assertNotNull(uuid);
     }
 
-    @Test
+//    @Test
     public void dateFromString() throws ParseException {
         final Date date = bogoService.dateFromString("03/01/2017", "MM/dd/yyyy");
         assertNotNull(date);
