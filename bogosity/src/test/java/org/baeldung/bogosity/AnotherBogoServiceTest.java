@@ -17,7 +17,7 @@ public class AnotherBogoServiceTest {
         service = new AnotherBogoService();
     }
 
-//    @Test
+    @Test
     public void repeatedString() {
         final String a = service.repeatedString("A", 5);
         assertEquals("AAAAA", a);
