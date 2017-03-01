@@ -179,6 +179,7 @@
 
 		<module>um-client</module>
 		<module>um-webapp</module>
+		<module>bogosity</module>
 	</modules>
 
 </project>
